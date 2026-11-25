@@ -1,0 +1,55 @@
+configuration {
+  modi: "drun,run,window";
+  show-icons: true;
+  display-drun: "  APPS";
+  display-run: "  CAST";
+  display-window: "  WINDOWS";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Nerd Font 11";
+  matching: "fuzzy";
+  sort: true;
+}
+
+* {
+  bg: #15191cf2;
+  panel: #20262b;
+  fg: #e7e1e9;
+  muted: #89918f;
+  purple: #a58aae;
+  green: #91a98c;
+  ember: #c58b55;
+  background-color: transparent;
+  text-color: @fg;
+}
+window {
+  width: 620px;
+  border: 1px;
+  border-color: @purple;
+  border-radius: 18px;
+  background-color: @bg;
+  padding: 18px;
+}
+mainbox { children: [inputbar, listview]; spacing: 14px; }
+inputbar {
+  background-color: @panel;
+  border: 1px;
+  border-color: #343b43;
+  border-radius: 12px;
+  padding: 12px;
+  children: [prompt, entry];
+}
+prompt { text-color: @purple; }
+entry { placeholder: "Search the grimoire…"; placeholder-color: @muted; }
+listview { columns: 1; lines: 7; fixed-height: false; spacing: 5px; }
+element {
+  padding: 9px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+element selected {
+  background-color: #34303b;
+  border: 1px;
+  border-color: @purple;
+}
+element-icon { size: 24px; margin: 0 10px 0 0; }
+element-text { text-color: @fg; }

@@ -1,0 +1,95 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 42,
+  "margin-top": 9,
+  "margin-left": 18,
+  "margin-right": 18,
+  "spacing": 8,
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "backlight",
+    "battery",
+    "tray"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+    "format": "󰣇  {}",
+    "max-length": 38,
+    "separate-outputs": true
+  },
+  "clock": {
+    "format": "󰥔  {:%a %d %b  ·  %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "󰤨  {signalStrength}%",
+    "format-ethernet": "󰈀  wired",
+    "format-disconnected": "󰤭  offline",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+  "backlight": {
+    "format": "󰃠  {percent}%",
+    "on-scroll-up": "brightnessctl set 2%+",
+    "on-scroll-down": "brightnessctl set 2%-"
+  },
+  "battery": {
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾"
+    ]
+  },
+  "tray": {
+    "spacing": 9
+  }
+}

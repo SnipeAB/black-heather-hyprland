@@ -1,0 +1,3 @@
+BLACK HEATHER — Arcane Highlands
+Hyprland overlay + Waybar + Kitty + Rofi + Mako + Hyprlock + wallpaper
+Designed for Athena OS / Arch Linux; user-provided AMD graphics.
